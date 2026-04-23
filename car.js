@@ -1,6 +1,10 @@
-class car {
-  constructor(engine) {
-    this.engine = engine;
+export default class Car {
+  constructor() {
+    this.engine ={};
+  }
+
+  setEngine(engine){
+    this.engine = engine
   }
 
   start() {
@@ -11,7 +15,26 @@ class car {
     this.engine.stop();
   }
 
-  accelerate() {}
+  accelerate() {
+    for (let i = 0; i > 20; i++) {
+      if (this.engine.engineSpeed() < 200) {
+        this.engine.increase();
+      }
+    }
+    console.log(
+      `Current speed is ${this.engine.engineSpeed()} ${this.engine.unit} `,
+    );
+  }
 
-  break() {}
+  break() {
+    for (let i = 0; i > 20; i++) {
+      if (this.engine.engineSpeed() > 0) {
+        this.engine.decrease();
+      }
+    }
+    console.log(
+      `Current speed is ${this.engine.engineSpeed()} ${this.engine.unit} `,
+    );
+  }
+
 }

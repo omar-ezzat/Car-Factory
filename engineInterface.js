@@ -1,5 +1,5 @@
 export default class Engine {
-  constructor(speed) {
+  constructor(speed=0) {
     if (this.constructor === Engine) {
       throw new Error("Can NOT create an Object from Interface");
     }
@@ -21,5 +21,9 @@ export default class Engine {
 
   stop() {
     throw new Error("implement the stop() function");
+  }
+
+  engineSpeed(){
+    throw new Error("implement the engineSpeed() function");
   }
 }
