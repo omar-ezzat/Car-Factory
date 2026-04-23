@@ -6,18 +6,22 @@ export class ElectricEngine extends Engine {
   }
 
   increase() {
-
     this.speed += 1;
   }
 
   decrease() {
     this.speed -= 1;
   }
+
+  start() {
+    console.log(`Electric Engine Started`);
+  }
+
+  stop() {
+    console.log(`Electric Engine Stopted`);
+  }
+
+  engineSpeed() {
+    return this.speed;
+  }
 }
-
-let engine = new ElectricEngine(50);
-
-console.log(engine.speed);
-
-engine.increase();
-console.log(engine.speed);
