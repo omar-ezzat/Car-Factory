@@ -6,7 +6,7 @@ import { HybridEngine } from "./hybridEngine.js";
 class CarFactory {
   static createCar(engineType) {
     let newCar = new Car();
-    installEngine(newCar, engineType);
+    CarFactory.installEngine(newCar, engineType);
     return newCar;
   }
   static createEngine(engine) {
@@ -29,6 +29,8 @@ class CarFactory {
   }
 
   static installEngine(car, engine) {
-    car.setEngine(createEngine(engine));
+    car.setEngine(CarFactory.createEngine(engine));
   }
 }
+
+

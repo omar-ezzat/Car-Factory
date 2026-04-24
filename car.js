@@ -16,7 +16,8 @@ export default class Car {
   }
 
   accelerate() {
-    for (let i = 0; i > 20; i++) {
+    for (let i = 0; i < 20; i++) {
+
       if (this.engine.engineSpeed() < 200) {
         this.engine.increase();
       }
@@ -27,7 +28,7 @@ export default class Car {
   }
 
   break() {
-    for (let i = 0; i > 20; i++) {
+    for (let i = 0; i < 20; i++) {
       if (this.engine.engineSpeed() > 0) {
         this.engine.decrease();
       }
